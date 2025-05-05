@@ -9,6 +9,7 @@ import java.util.Set;
 public class AlbumEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cd_album")
     private Integer id;
 

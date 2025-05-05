@@ -10,6 +10,7 @@ import java.util.Set;
 public class ArtistaEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cd_artista")
     private Integer id;
 

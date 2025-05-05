@@ -2,22 +2,20 @@ package com.example.demo.models;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "Nacionalidade")
 public class NacionalidadeEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cd_nacionalidade")
     private Integer id;
 
     @Column(name = "nm_nacionalidade", length = 50)
     private String nome;
 
-    @OneToMany(mappedBy = "nacionalidade")
-    private Set<ArtistaEntity> artistas = new HashSet<>();
+//    @OneToMany(mappedBy = "nacionalidade", fetch = FetchType.LAZY)
+//    private Set<ArtistaEntity> artistas = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -35,12 +33,12 @@ public class NacionalidadeEntity {
         this.nome = nome;
     }
 
-    public Set<ArtistaEntity> getArtistas() {
-        return artistas;
-    }
-
-    public void setArtistas(Set<ArtistaEntity> artistas) {
-        this.artistas = artistas;
-    }
+//    public Set<ArtistaEntity> getArtistas() {
+//        return artistas;
+//    }
+//
+//    public void setArtistas(Set<ArtistaEntity> artistas) {
+//        this.artistas = artistas;
+//    }
 }
 
