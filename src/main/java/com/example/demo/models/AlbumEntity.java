@@ -1,7 +1,6 @@
 package com.example.demo.models;
 
 import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,7 +18,7 @@ public class AlbumEntity {
     @Column(name = "nr_ano")
     private Integer ano;
 
-    @Column(name = "nr_duracao_total_alb", precision = 9, scale = 2)
+    @Column(name = "nr_duracao_total_alb")
     private Double duracaoTotal;
 
     @ManyToMany

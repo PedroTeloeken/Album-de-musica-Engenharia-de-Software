@@ -1,7 +1,6 @@
 package com.example.demo.models;
 
 import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +15,7 @@ public class MusicaEntity {
     @Column(name = "nm_musica", length = 50)
     private String nome;
 
-    @Column(name = "nr_duracao_musica", precision = 9, scale = 2)
+    @Column(name = "nr_duracao_musica")
     private Double duracao;
 
     @ManyToMany(mappedBy = "musicas")
@@ -29,5 +28,45 @@ public class MusicaEntity {
             inverseJoinColumns = @JoinColumn(name = "cd_artista")
     )
     private Set<ArtistaEntity> artistas = new HashSet<>();
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getDuracaoTotal() {
+        return duracao;
+    }
+
+    public void setDuracaoTotal(Double duracaoTotal) {
+        this.duracao = duracaoTotal;
+    }
+
+    public Set<AlbumEntity> getAlbuns() {
+        return albuns;
+    }
+
+    public void setAlbuns(Set<AlbumEntity> albuns) {
+        this.albuns = albuns;
+    }
+
+    public Set<ArtistaEntity> getArtistas() {
+        return artistas;
+    }
+
+    public void setArtistas(Set<ArtistaEntity> artistas) {
+        this.artistas = artistas;
+    }
 }
 
