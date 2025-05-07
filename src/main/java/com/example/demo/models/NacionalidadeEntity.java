@@ -14,9 +14,6 @@ public class NacionalidadeEntity {
     @Column(name = "nm_nacionalidade", length = 50)
     private String nome;
 
-//    @OneToMany(mappedBy = "nacionalidade", fetch = FetchType.LAZY)
-//    private Set<ArtistaEntity> artistas = new HashSet<>();
-
     public Integer getId() {
         return id;
     }
@@ -33,12 +30,5 @@ public class NacionalidadeEntity {
         this.nome = nome;
     }
 
-//    public Set<ArtistaEntity> getArtistas() {
-//        return artistas;
-//    }
-//
-//    public void setArtistas(Set<ArtistaEntity> artistas) {
-//        this.artistas = artistas;
-//    }
 }
 

@@ -40,9 +40,4 @@ public class NacionalidadeService {
 
         return nacionalidadeRepository.save(existingEntity);
     }
-
-
-
-
-
 }
